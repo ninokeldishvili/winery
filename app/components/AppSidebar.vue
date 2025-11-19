@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/sidebar";
 
 import { Icon } from "@iconify/vue";
+const { $t } = useI18n();
 
 const route = useRoute();
 const isActive = (href: string) => {
@@ -60,13 +61,20 @@ const sidebarItems: SidebarItem[] = [
   <SidebarProvider>
     <Sidebar>
       <SidebarHeader class="p-10">
-              <NuxtLink href="/" class="flex flex-col gap-2 items-center w-full justify-center">
-
-                  <div class="border-2 border-sidebar-primary rounded-full p-3">
-                    <Icon icon="streamline-cyber:wine-bottle-glass" class="text-sidebar-primary font-extrabold text-4xl"/>
-                  </div>
-                  <span class="truncate font-semibold text-sidebar-foreground text-xl">GELA WINE</span>
-              </NuxtLink>
+        <i18n-link
+          to="/"
+          class="flex flex-col gap-2 items-center w-full justify-center"
+        >
+          <div class="border-2 border-sidebar-primary rounded-full p-3">
+            <Icon
+              icon="streamline-cyber:wine-bottle-glass"
+              class="text-sidebar-primary font-extrabold text-4xl"
+            />
+          </div>
+          <span class="truncate font-semibold text-sidebar-foreground text-xl"
+            >GELA WINE</span
+          >
+        </i18n-link>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup class="p-10">
@@ -84,8 +92,8 @@ const sidebarItems: SidebarItem[] = [
                       : ''
                   "
                 >
-                  <NuxtLink
-                    :href="sidebarItem.href"
+                  <i18n-link
+                    :to="sidebarItem.href"
                     class="flex items-center justify-center"
                   >
                     <Icon
@@ -100,14 +108,17 @@ const sidebarItems: SidebarItem[] = [
                       ></span>
                       {{ $t(sidebarItem.name) }}
                     </span>
-                  </NuxtLink>
+                  </i18n-link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter> footer </SidebarFooter>
+      <SidebarFooter class="flex p-10 gap-6 items-center justify-center">
+        <LanguageSwitcher />
+        <SocialMedia />
+      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
     <SidebarInset>

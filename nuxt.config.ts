@@ -22,8 +22,13 @@ export default defineNuxtConfig({
   },
   i18n: {
     locales: [
-      { code: "en", iso: "en-US", dir: "ltr" },
-      { code: "ka", iso: "ka-GE", dir: "ltr" },
+      {
+        code: "en",
+        iso: "en-US",
+        dir: "ltr",
+        icon: "twemoji:flag-for-flag-united-states",
+      },
+      { code: "ka", iso: "ka-GE", dir: "ltr", icon: "twemoji:flag-georgia" },
     ],
     defaultLocale: "en",
     translationDir: "locales",
