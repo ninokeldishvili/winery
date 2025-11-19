@@ -54,7 +54,6 @@ const sidebarItems: SidebarItem[] = [
     icon: "",
   },
 ];
-
 </script>
 
 <template>
@@ -65,7 +64,6 @@ const sidebarItems: SidebarItem[] = [
           <SidebarMenuItem>
             <SidebarMenuButton size="lg">
               <NuxtLink href="/" class="flex gap-2 items-center w-full">
-
                 <div
                   class="grid flex-1 text-left text-sm leading-tight transition-all duration-300 group-has-[[data-collapsible=icon]]/sidebar-wrapper:hidden"
                 >
@@ -92,17 +90,20 @@ const sidebarItems: SidebarItem[] = [
                       : ''
                   "
                 >
-                  <NuxtLink :href="sidebarItem.href" class="flex items-center justify-center">
+                  <NuxtLink
+                    :href="sidebarItem.href"
+                    class="flex items-center justify-center"
+                  >
                     <Icon
-                        v-if="sidebarItem.icon"
+                      v-if="sidebarItem.icon"
                       :icon="sidebarItem.icon"
                       class="size-3 text-primary"
                     />
                     <span class="text-lg uppercase relative inline-block">
-                        <span
-                            v-if="isActive(sidebarItem.href)"
-                            class="absolute left-0 w-full h-2 bg-sidebar-primary rounded-none -bottom-1"
-                        ></span>
+                      <span
+                        v-if="isActive(sidebarItem.href)"
+                        class="absolute left-0 bottom-0 h-1 bg-sidebar-primary rounded-none animate-[grow_0.35s_ease-out_forwards]"
+                      ></span>
                       {{ $t(sidebarItem.name) }}
                     </span>
                   </NuxtLink>
@@ -112,9 +113,7 @@ const sidebarItems: SidebarItem[] = [
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
-footer
-      </SidebarFooter>
+      <SidebarFooter> footer </SidebarFooter>
       <SidebarRail />
     </Sidebar>
     <SidebarInset>
