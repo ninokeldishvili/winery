@@ -38,6 +38,21 @@ const sidebarItems: SidebarItem[] = [
     href: "/wine",
     icon: "",
   },
+  {
+    name: "events",
+    href: "/events",
+    icon: "",
+  },
+  {
+    name: "about-us",
+    href: "/about-us",
+    icon: "",
+  },
+  {
+    name: "contact",
+    href: "/contact",
+    icon: "",
+  },
 ];
 
 </script>
@@ -62,9 +77,9 @@ const sidebarItems: SidebarItem[] = [
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
+        <SidebarGroup class="p-10">
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu class="gap-4">
               <SidebarMenuItem
                 v-for="sidebarItem in sidebarItems"
                 :key="sidebarItem.href"
@@ -73,17 +88,23 @@ const sidebarItems: SidebarItem[] = [
                   as-child
                   :class="
                     isActive(sidebarItem.href)
-                      ? 'bg-accent text-accent-foreground border border-primary'
+                      ? 'text-sidebar-primary border-b border-sidebar-primary rounded-none '
                       : ''
                   "
                 >
-                  <NuxtLink :href="sidebarItem.href">
+                  <NuxtLink :href="sidebarItem.href" class="flex items-center justify-center">
                     <Icon
                         v-if="sidebarItem.icon"
                       :icon="sidebarItem.icon"
                       class="size-3 text-primary"
                     />
-                    <span>{{ $t(sidebarItem.name) }}</span>
+                    <span class="text-lg uppercase relative inline-block">
+                        <span
+                            v-if="isActive(sidebarItem.href)"
+                            class="absolute left-0 w-full h-2 bg-sidebar-primary rounded-none -bottom-1"
+                        ></span>
+                      {{ $t(sidebarItem.name) }}
+                    </span>
                   </NuxtLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
