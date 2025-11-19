@@ -58,21 +58,15 @@ const sidebarItems: SidebarItem[] = [
 
 <template>
   <SidebarProvider>
-    <Sidebar collapsible="icon">
-      <SidebarHeader>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton size="lg">
-              <NuxtLink href="/" class="flex gap-2 items-center w-full">
-                <div
-                  class="grid flex-1 text-left text-sm leading-tight transition-all duration-300 group-has-[[data-collapsible=icon]]/sidebar-wrapper:hidden"
-                >
-                  <span class="truncate font-semibold">Wine</span>
-                </div>
+    <Sidebar>
+      <SidebarHeader class="p-10">
+              <NuxtLink href="/" class="flex flex-col gap-2 items-center w-full justify-center">
+
+                  <div class="border-2 border-sidebar-primary rounded-full p-3">
+                    <Icon icon="streamline-cyber:wine-bottle-glass" class="text-sidebar-primary font-extrabold text-4xl"/>
+                  </div>
+                  <span class="truncate font-semibold text-sidebar-foreground text-xl">GELA WINE</span>
               </NuxtLink>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup class="p-10">
