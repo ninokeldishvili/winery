@@ -16,12 +16,25 @@ import {
 } from "@/components/ui/sidebar";
 
 import { Icon } from "@iconify/vue";
-const { $t } = useI18n();
+const { $t, getLocales } = useI18n();
 
 const route = useRoute();
 const isActive = (href: string) => {
-  return route.path === href;
+  const path = route.path;
+
+  // list of locale codes
+  const localeCodes = getLocales().map((l) => `/${l.code}`);
+
+  // remove leading locale prefix if present
+  const normalized = localeCodes.includes(
+    path.split("/")[1] ? "/" + path.split("/")[1] : "",
+  )
+    ? path.replace(/^\/[a-zA-Z-]+/, "")
+    : path;
+
+  return normalized === href;
 };
+
 export interface SidebarItem {
   name: string;
   href: string;
