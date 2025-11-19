@@ -128,9 +128,12 @@ const sidebarItems: SidebarItem[] = [
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter class="flex p-10 gap-6 items-center justify-center">
+      <SidebarFooter class="flex p-10 gap-6">
         <LanguageSwitcher />
         <SocialMedia />
+        <div class="text-center text-xs">
+          Copyright &copy {{ new Date().getFullYear() }}
+        </div>
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
