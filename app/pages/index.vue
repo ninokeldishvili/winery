@@ -7,8 +7,8 @@ const { $t } = useI18n();
     <div
       class="relative col-span-1 flex flex-col gap-6 items-center justify-center py-12"
     >
-      <span class="font-bold text-8xl font-tangerine"> Gela Wine </span>
-      <div class="font-georgian text-xl max-w-2/3 text-center">
+      <span class="font-bold text-8xl font-tangerine"> Alazare </span>
+      <div class="font-georgian text-xl max-w-1/2 text-center">
         {{ $t("where-every-bottle") }}
       </div>
 
@@ -20,11 +20,21 @@ const { $t } = useI18n();
         class="absolute bottom-12 left-0 w-20 h-20 border-b-2 border-l-2 border-sidebar"
       ></span>
     </div>
-    <div class="col-span-2 flex gap-6 px-20 items-center justify-center">
+    <div class="col-span-2 flex px-20 items-center justify-center">
       <img
         alt="white"
-        src="/images/wines.png"
-        class="h-full object-cover max-h-[600px]"
+        src="/images/white.webp"
+        class="h-full object-cover max-h-[550px]"
+      />
+      <img
+        alt="white"
+        src="/images/rose.webp"
+        class="h-full object-cover max-h-[600px] mt-10"
+      />
+      <img
+        alt="white"
+        src="/images/red.webp"
+        class="h-full object-cover max-h-[550px]"
       />
     </div>
   </div>

@@ -84,8 +84,9 @@ const sidebarItems: SidebarItem[] = [
               class="text-sidebar-primary font-extrabold text-4xl"
             />
           </div>
-          <span class="truncate font-semibold text-sidebar-foreground text-xl"
-            >GELA WINE</span
+          <span
+            class="truncate font-semibold text-sidebar-foreground text-xl uppercase"
+            >Alazare</span
           >
         </i18n-link>
       </SidebarHeader>
