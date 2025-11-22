@@ -15,7 +15,7 @@ const { $t } = useI18n();
       class="w-full"
       :plugins="[
         Autoplay({
-          delay: 4000,
+          delay: 3000,
         }),
       ]"
     >
@@ -56,20 +56,36 @@ const { $t } = useI18n();
               />
             </div></div
         ></CarouselItem>
-        <CarouselItem>
+        <CarouselItem class="relative">
+          <i18n-link
+              to="/wine"
+            class="absolute z-50 text-6xl text-sidebar-foreground font-tangerine bottom-50 right-40 border-sidebar-foreground py-2 px-8 cursor-pointer transform transition-transform hover:scale-110 duration-500 ease-in-out hover:bg-sidebar-foreground/20 border-2 font-bold"
+          >
+            {{ $t("discover-our-red-wines") }}
+   </i18n-link>
           <img
             src="/images/red.gif"
             alt="red wine"
             class="h-screen object-cover w-full"
           />
         </CarouselItem>
-        <CarouselItem
-          ><img
+        <CarouselItem class="relative">
+          <i18n-link
+              to="/wine"
+            class="absolute z-50 text-6xl font-bold text-secondary font-tangerine bottom-10 right-10 border-2 border-secondary py-2 px-8 cursor-pointer transform transition-transform hover:scale-110 duration-600 ease-in-out hover:bg-secondary/20"
+          >
+            {{ $t("discover-our-white-wines") }}
+
+          </i18n-link>
+
+          <img
             src="/images/white.gif"
             alt="white wine"
             class="h-screen object-cover w-full"
         /></CarouselItem>
       </CarouselContent>
+      <CarouselPrevious class="left-5" />
+      <CarouselNext class="right-5" />
     </Carousel>
   </div>
 </template>
