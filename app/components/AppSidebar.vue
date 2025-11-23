@@ -22,18 +22,18 @@ const route = useRoute();
 const isActive = (href: string) => {
   const path = route.path;
 
-  // list of locale codes
   const localeCodes = getLocales().map((l) => `/${l.code}`);
+  const prefix = path.split("/")[1] ? "/" + path.split("/")[1] : "";
 
-  // remove leading locale prefix if present
-  const normalized = localeCodes.includes(
-    path.split("/")[1] ? "/" + path.split("/")[1] : "",
-  )
+  let normalized = localeCodes.includes(prefix)
     ? path.replace(/^\/[a-zA-Z-]+/, "")
     : path;
+
+  // ensure "/" behavior
+  if (normalized === "") normalized = "/";
+
   return "/" + normalized.split("/")[1] === href;
 };
-
 export interface SidebarItem {
   name: string;
   href: string;
