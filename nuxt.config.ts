@@ -51,7 +51,7 @@ export default defineNuxtConfig({
         wght: "200..900",
         ital: "200..700",
       },
-      "Noto Sans Georgian": "100..900",
+      "Noto Serif Georgian": "100..900",
       Tangerine: [400, 700],
     },
     download: true, // Downloads fonts for self-hosting (optional)

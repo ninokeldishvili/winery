@@ -40,7 +40,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --font-display: "Roboto", "sans-serif";
-  --font-georgian: "Noto Sans Georgian", sans-serif;
+  --font-georgian: "Noto Serif Georgian", sans-serif;
   --font-tangerine: "Tangerine", cursive;
   --color-wine-red: var(--wine-red);
   --color-wine-rose: var(--wine-rose);
@@ -124,7 +124,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 font-display;
+    @apply border-border outline-ring/50 font-georgian;
   }
   body {
     @apply bg-background text-foreground;

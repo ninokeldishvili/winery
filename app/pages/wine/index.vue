@@ -1,10 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { getLocale } = useI18n();
+const currentLocale = computed(() => {
+  return getLocale();
+});
+</script>
 
 <template>
   <div
     class="flex flex-col gap-5 md:gap-20 items-center justify-center w-full h-full md:mb-30 py-20 md:py-0"
   >
-    <h1 class="font-tangerine text-6xl font-bold italic">
+    <h1
+      class="font-bold italic text-center"
+      :class="currentLocale !== 'ka' ? 'font-tangerine text-6xl' : 'text-2xl'"
+    >
       {{ $t("find-your-perfect-pour") }}
     </h1>
     <div class="grid md:grid-cols-3 grid-cols-1 w-full md:gap-0 gap-30">
@@ -36,7 +44,7 @@
               :key="n"
               class="text-6xl font-extrabold uppercase whitespace-nowrap font-tangerine"
             >
-              {{ $t("red-wines") }}
+              Red wines
             </span>
           </div>
         </div>
@@ -74,7 +82,7 @@
               :key="n"
               class="text-6xl font-extrabold uppercase whitespace-nowrap font-tangerine"
             >
-              {{ $t("white-wines") }}
+              White wines
             </span>
           </div>
         </div>
@@ -112,7 +120,7 @@
               :key="n"
               class="text-6xl font-extrabold uppercase whitespace-nowrap font-tangerine"
             >
-              {{ $t("rose-wines") }}
+              Rose wines
             </span>
           </div>
         </div>

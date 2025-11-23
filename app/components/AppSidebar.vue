@@ -16,8 +16,10 @@ import {
 } from "@/components/ui/sidebar";
 
 import { Icon } from "@iconify/vue";
-const { $t, getLocales } = useI18n();
-
+const { $t, getLocales, getLocale } = useI18n();
+const currentLocale = computed(() => {
+  return getLocale();
+});
 const route = useRoute();
 const isActive = (href: string) => {
   const path = route.path;
@@ -84,7 +86,7 @@ const sidebarItems: SidebarItem[] = [
             />
           </div>
           <span
-            class="truncate font-semibold text-sidebar-foreground text-xl uppercase"
+            class="truncate font-semibold text-sidebar-foreground text-xl uppercase font-display"
             >Alazare</span
           >
         </i18n-link>
@@ -114,7 +116,10 @@ const sidebarItems: SidebarItem[] = [
                       :icon="sidebarItem.icon"
                       class="size-3 text-primary"
                     />
-                    <span class="text-lg uppercase relative inline-block">
+                    <span
+                      class="text-lg uppercase relative inline-block"
+                      :class="currentLocale !== 'ka' ? 'font-display' : ''"
+                    >
                       <span
                         v-if="isActive(sidebarItem.href)"
                         class="absolute left-0 bottom-0 h-1 bg-sidebar-primary rounded-none animate-[grow_0.35s_ease-out_forwards]"

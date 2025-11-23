@@ -58,7 +58,7 @@ const wines = ref<Wine[]>([
   <div class="pb-20">
     <div class="text-center py-20">
       <h1
-        class="font-georgian text-5xl md:text-7xl uppercase tracking-widest text-wine-red"
+        class="font-display text-5xl md:text-7xl uppercase tracking-widest text-wine-red"
       >
         <span class="relative inline-block mr-1">
           <span
@@ -67,7 +67,7 @@ const wines = ref<Wine[]>([
 
           <span class="relative z-10 text-wine-white">D</span>
         </span>
-        <span class="relative z-10">epth</span>
+        <span class="relative z-10 font-display">epth</span>
 
         <span
           class="text-4xl md:text-6xl align-middle mx-2 font-tangerine lowercase text-primary"
