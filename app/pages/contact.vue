@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
   <section class="min-h-screen bg-background text-foreground py-20">
-    <div class="container mx-auto px-6 max-w-4xl">
+    <div class="px-40 md:px-20">
       <h1 class="font-heading text-5xl mb-10 text-center">{{ $t("title") }}</h1>
 
       <div class="space-y-12">
@@ -37,7 +37,7 @@
         <!-- Fancy Section -->
         <div class="relative p-12 rounded-2xl shadow bg-card overflow-hidden">
           <div
-            class="absolute inset-0 opacity-10 pointer-events-none bg-[url('/images/grapes-pattern.png')] bg-cover bg-center"
+            class="absolute inset-0 opacity-10 pointer-events-none bg-wine-red/60 bg-center"
           ></div>
 
           <h2 class="text-4xl font-semibold mb-6 text-center">
@@ -53,18 +53,6 @@
           <div
             class="flex flex-col md:flex-row items-center justify-center gap-6 mt-8"
           >
-            <div
-              class="p-6 rounded-xl bg-secondary shadow text-center w-full md:w-1/3"
-            >
-              <h3 class="text-xl font-semibold mb-2">
-                {{ $t("working-hours-title") }}
-              </h3>
-              <p class="font-base leading-relaxed">
-                {{ $t("working-days") }}<br />
-                {{ $t("working-hours") }}
-              </p>
-            </div>
-
             <div
               class="p-6 rounded-xl bg-secondary shadow text-center w-full md:w-1/3"
             >
