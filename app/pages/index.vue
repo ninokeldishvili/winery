@@ -73,7 +73,7 @@ const { $t } = useI18n();
 
         <CarouselItem class="relative">
           <i18n-link
-            to="/wine"
+            to="/wine/red-wines"
             class="absolute z-50 /* Mobile: Centered, smaller text */ bottom-20 left-1/2 -translate-x-1/2 text-4xl whitespace-nowrap px-6 /* Desktop: Custom position, large text */ md:bottom-50 md:right-40 md:left-auto md:translate-x-0 md:text-6xl md:px-8 text-sidebar-foreground font-tangerine border-sidebar-foreground py-2 cursor-pointer transform transition-transform hover:scale-110 duration-500 ease-in-out bg-sidebar-foreground/20 border-2 font-bold backdrop-blur-sm"
           >
             {{ $t("discover-our-red-wines") }}
@@ -87,7 +87,7 @@ const { $t } = useI18n();
 
         <CarouselItem class="relative">
           <i18n-link
-            to="/wine"
+            to="/wine/white-wines"
             class="absolute z-50 /* Mobile: Centered, smaller text */ bottom-20 left-1/2 -translate-x-1/2 text-4xl whitespace-nowrap px-6 /* Desktop: Custom position, large text */ md:bottom-10 md:right-10 md:left-auto md:translate-x-0 md:text-6xl md:px-8 font-bold text-secondary font-tangerine border-2 border-secondary py-2 cursor-pointer transform transition-transform hover:scale-110 duration-600 ease-in-out bg-secondary/20 backdrop-blur-sm"
           >
             {{ $t("discover-our-white-wines") }}

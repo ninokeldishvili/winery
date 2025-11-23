@@ -2,25 +2,25 @@
 
 <template>
   <div
-    class="flex flex-col gap-20 items-center justify-center w-full h-full mb-30"
+    class="flex flex-col gap-5 md:gap-20 items-center justify-center w-full h-full md:mb-30 py-20 md:py-0"
   >
     <h1 class="font-tangerine text-6xl font-bold">
       {{ $t("find-your-perfect-pour") }}
     </h1>
-    <div class="grid grid-cols-3 w-full">
+    <div class="grid md:grid-cols-3 grid-cols-1 w-full md:gap-0 gap-30">
       <i18n-link
         to="/wine/red-wines"
-        class="relative flex flex-col gap-20 items-center justify-center group cursor-pointer"
+        class="relative flex flex-col gap-12 md:gap-20 items-center justify-center group cursor-pointer"
       >
         <h2
-          class="relative text-2xl font-georgian uppercase px-8 py-3 z-10 transition-colors duration-300 group-hover:text-secondary"
+          class="relative text-2xl font-georgian uppercase px-8 py-3 z-10 transition-colors duration-300 group-hover:text-secondary md:text-primary text-secondary"
         >
           <span
-            class="absolute inset-0 bg-wine-red/80 -z-10 opacity-0 transition-all duration-500 ease-in-out rounded-[60%_40%_30%_70%/60%_30%_70%_40%] group-hover:opacity-100 group-hover:scale-125 group-hover:rotate-6"
+            class="absolute inset-0 bg-wine-red/80 -z-10 opacity-100 md:opacity-0 transition-all duration-500 ease-in-out rounded-[60%_40%_30%_70%/60%_30%_70%_40%] group-hover:opacity-100 group-hover:scale-125 group-hover:rotate-6"
           ></span>
 
           <span
-            class="absolute inset-0 bg-wine-red -z-20 opacity-0 transition-all duration-700 ease-in-out rounded-[40%_60%_60%_40%/40%_50%_60%_50%] group-hover:opacity-100 group-hover:scale-110 group-hover:-rotate-3"
+            class="absolute inset-0 bg-wine-red -z-20 opacity-100 md:opacity-0 transition-all duration-700 ease-in-out rounded-[40%_60%_60%_40%/40%_50%_60%_50%] group-hover:opacity-100 group-hover:scale-110 group-hover:-rotate-3"
           ></span>
 
           {{ $t("red-wines") }}
@@ -48,17 +48,17 @@
       </i18n-link>
       <i18n-link
         to="/wine/white-wines"
-        class="relative flex flex-col gap-20 items-center justify-center group cursor-pointer"
+        class="relative flex flex-col gap-12 md:gap-20 items-center justify-center group cursor-pointer"
       >
         <h2
-          class="relative text-2xl font-georgian uppercase px-8 py-3 z-10 transition-colors duration-300 group-hover:text-secondary"
+          class="relative text-2xl font-georgian uppercase px-8 py-3 z-10 transition-colors duration-300 group-hover:text-secondary md:text-primary text-secondary"
         >
           <span
-            class="absolute inset-0 bg-wine-white/80 -z-10 opacity-0 transition-all duration-500 ease-in-out rounded-[38%_62%_63%_37%/41%_44%_56%_59%] group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-2"
+            class="absolute inset-0 bg-wine-white/80 -z-10 opacity-100 md:opacity-0 transition-all duration-500 ease-in-out rounded-[38%_62%_63%_37%/41%_44%_56%_59%] group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-2"
           ></span>
 
           <span
-            class="absolute inset-0 bg-wine-white -z-20 opacity-0 transition-all duration-700 ease-in-out rounded-[50%_50%_33%_67%/55%_27%_73%_45%] group-hover:opacity-100 group-hover:scale-105 group-hover:-rotate-1"
+            class="absolute inset-0 bg-wine-white -z-20 opacity-100 md:opacity-0 transition-all duration-700 ease-in-out rounded-[50%_50%_33%_67%/55%_27%_73%_45%] group-hover:opacity-100 group-hover:scale-105 group-hover:-rotate-1"
           ></span>
 
           {{ $t("white-wines") }}
@@ -86,17 +86,17 @@
       </i18n-link>
       <i18n-link
         to="/wine/rose-wines"
-        class="relative flex flex-col gap-20 items-center justify-center group cursor-pointer"
+        class="relative flex flex-col gap-12 md:gap-20 items-center justify-center group cursor-pointer"
       >
         <h2
-          class="relative text-2xl font-georgian uppercase px-8 py-3 z-10 transition-colors duration-300 group-hover:text-secondary"
+          class="relative text-2xl font-georgian uppercase px-8 py-3 z-10 transition-colors duration-300 group-hover:text-secondary md:text-primary text-secondary"
         >
           <span
-            class="absolute inset-0 bg-wine-rose/80 -z-10 opacity-0 transition-all duration-500 ease-in-out rounded-[45%_55%_70%_30%/50%_30%_70%_50%] group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-3"
+            class="absolute inset-0 bg-wine-rose/80 -z-10 opacity-100 md:opacity-0 transition-all duration-500 ease-in-out rounded-[45%_55%_70%_30%/50%_30%_70%_50%] group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-3"
           ></span>
 
           <span
-            class="absolute inset-0 bg-wine-rose -z-20 opacity-0 transition-all duration-700 ease-in-out rounded-[70%_30%_30%_70%/60%_40%_60%_40%] group-hover:opacity-100 group-hover:scale-105 group-hover:-rotate-2"
+            class="absolute inset-0 bg-wine-rose -z-20 opacity-100 md:opacity-0 transition-all duration-700 ease-in-out rounded-[70%_30%_30%_70%/60%_40%_60%_40%] group-hover:opacity-100 group-hover:scale-105 group-hover:-rotate-2"
           ></span>
 
           {{ $t("rose-wines") }}
