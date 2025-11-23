@@ -1,0 +1,35 @@
+<svg
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-full h-full"
+>
+    <defs>
+        <filter id="liquid-texture">
+            <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+        </filter>
+    </defs>
+
+    <g fill="#722F37" style="mix-blend-mode: multiply;">
+        <path
+                opacity="0.7"
+                d="M100,15 C53,15 15,53 15,100 C15,147 53,185 100,185 C147,185 185,147 185,100 C185,53 147,15 100,15 M100,25 C140,25 175,60 173,100 C171,140 140,173 100,175 C60,173 25,140 27,100 C29,60 60,25 100,25"
+        />
+
+        <path
+                opacity="0.5"
+                d="M140,140 Q160,120 165,100 Q170,140 140,165 Q120,170 140,140 Z"
+                filter="url(#liquid-texture)"
+        />
+
+        <circle cx="180" cy="110" r="3" opacity="0.6" />
+        <circle cx="170" cy="160" r="2" opacity="0.8" />
+        <circle cx="120" cy="180" r="2.5" opacity="0.5" />
+
+        <path
+                opacity="0.9"
+                d="M100,10 C50,10 10,50 10,100 C10,150 50,190 100,190 C150,190 190,150 190,100 C190,50 150,10 100,10 M100,18 C145,18 182,55 182,100 C182,145 145,182 100,182 C55,182 18,145 18,100 C18,55 55,18 100,18"
+                fill-rule="evenodd"
+        />
+    </g>
+</svg>
