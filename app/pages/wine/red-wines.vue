@@ -25,4 +25,16 @@
       {{ $t("explore-bold-textures") }}
     </p>
   </div>
+  <div class="flex px-20 h-1/2 relative">
+    <img
+      src="/images/red-wine-bg.png"
+      alt="red wine"
+      class="w-full object-cover opacity-30 blur-xs"
+    />
+    <img
+      src="/images/red.webp"
+      alt="red wine"
+      class="h-full absolute left-40 bottom-5 object-cover"
+    />
+  </div>
 </template>
