@@ -138,7 +138,10 @@ const sidebarItems: SidebarItem[] = [
       <SidebarRail />
     </Sidebar>
     <SidebarInset>
-      <div class="flex flex-1 flex-col gap-4 min-h-screen">
+      <div class="flex flex-1 flex-col gap-4 min-h-screen relative">
+        <SidebarTrigger
+          class="md:hidden absolute top-2 left-2 z-10 text-wine-white p-2 bg-sidebar"
+        />
         <slot />
       </div>
     </SidebarInset>
