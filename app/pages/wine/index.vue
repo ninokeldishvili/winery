@@ -4,7 +4,7 @@
   <div
     class="flex flex-col gap-5 md:gap-20 items-center justify-center w-full h-full md:mb-30 py-20 md:py-0"
   >
-    <h1 class="font-tangerine text-6xl font-bold">
+    <h1 class="font-tangerine text-6xl font-bold italic">
       {{ $t("find-your-perfect-pour") }}
     </h1>
     <div class="grid md:grid-cols-3 grid-cols-1 w-full md:gap-0 gap-30">
