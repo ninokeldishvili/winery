@@ -15,13 +15,13 @@ const { $t } = useI18n();
     <Carousel
       class="w-full"
       :opts="{
-        loop: true, // Recommended for fade effects so it cycles smoothly
+        loop: true,
       }"
       :plugins="[
         Autoplay({
           delay: 3000,
         }),
-        Fade(), // <--- Add the plugin here
+        Fade(),
       ]"
     >
       <CarouselContent>
@@ -64,7 +64,7 @@ const { $t } = useI18n();
         <CarouselItem class="relative">
           <i18n-link
             to="/wine"
-            class="absolute z-50 text-6xl text-sidebar-foreground font-tangerine bottom-50 right-40 border-sidebar-foreground py-2 px-8 cursor-pointer transform transition-transform hover:scale-110 duration-500 ease-in-out hover:bg-sidebar-foreground/20 border-2 font-bold"
+            class="absolute z-50 text-6xl text-sidebar-foreground font-tangerine bottom-50 right-40 border-sidebar-foreground py-2 px-8 cursor-pointer transform transition-transform hover:scale-110 duration-500 ease-in-out bg-sidebar-foreground/20 border-2 font-bold"
           >
             {{ $t("discover-our-red-wines") }}
           </i18n-link>
@@ -77,7 +77,7 @@ const { $t } = useI18n();
         <CarouselItem class="relative">
           <i18n-link
             to="/wine"
-            class="absolute z-50 text-6xl font-bold text-secondary font-tangerine bottom-10 right-10 border-2 border-secondary py-2 px-8 cursor-pointer transform transition-transform hover:scale-110 duration-600 ease-in-out hover:bg-secondary/20"
+            class="absolute z-50 text-6xl font-bold text-secondary font-tangerine bottom-10 right-10 border-2 border-secondary py-2 px-8 cursor-pointer transform transition-transform hover:scale-110 duration-600 ease-in-out bg-secondary/20"
           >
             {{ $t("discover-our-white-wines") }}
           </i18n-link>
