@@ -1,90 +1,162 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SocialMedia from "@/components/SocialMedia.vue";
+import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
+
+const { getLocale } = useI18n();
+const currentLocale = computed(() => {
+  return getLocale();
+});
+</script>
+
 <template>
-  <section class="min-h-screen bg-background text-foreground py-20">
-    <div class="px-40 md:px-20">
-      <h1 class="font-heading text-5xl mb-10 text-center">{{ $t("title") }}</h1>
+  <div
+    class="min-h-screen bg-background text-foreground py-20 relative overflow-hidden"
+    :class="currentLocale !== 'ka' ? 'font-display' : ''"
+  >
+    <!-- Decorative grapevine corner -->
+    <img
+      alt="stain"
+      src="/images/red-stain.svg"
+      class="hidden md:block absolute top-10 left-10 w-40 opacity-20"
+    />
+    <img
+      alt="stain"
+      src="/images/red-stain.svg"
+      class="hidden md:block absolute bottom-10 right-10 w-40 opacity-20 rotate-180"
+    />
+    <div class="px-6 md:px-20 xl:px-40 flex flex-col gap-8 md:gap-12">
+      <h1
+        class="text-2xl md:text-5xl md:mb-16 text-center text-wine-white"
+        :class="currentLocale !== 'ka' ? 'font-display' : ''"
+      >
+        {{ $t("title") }}
+      </h1>
 
       <div class="space-y-12">
         <!-- Contact Info Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div class="p-6 rounded-2xl shadow bg-card">
-            <h2 class="text-2xl font-semibold mb-4">
-              {{ $t("address-title") }}
-            </h2>
-            <p class="font-base text-lg leading-relaxed">
-              {{ $t("address-line1") }}<br />
-              {{ $t("address-line2") }}
-            </p>
-          </div>
-
-          <div class="p-6 rounded-2xl shadow bg-card">
-            <h2 class="text-2xl font-semibold mb-4">
-              {{ $t("details-title") }}
-            </h2>
-            <p class="font-base text-lg leading-relaxed">
-              {{ $t("email") }}:
-              <a href="mailto:info@alazare.ge" class="underline"
-                >info@alazare.ge</a
-              ><br />
-              {{ $t("phone") }}:
-              <a href="tel:+995500000000" class="underline"
-                >+995 500 00 00 00</a
+          <Card class="bg-card shadow-xl border-wine-red/20">
+            <CardHeader>
+              <CardTitle
+                class="text-2xl text-wine-white"
+                :class="currentLocale !== 'ka' ? 'font-display' : ''"
+                >{{ $t("address-title") }}</CardTitle
               >
-            </p>
-          </div>
+            </CardHeader>
+            <CardContent>
+              <p
+                class="text-lg leading-relaxed"
+                :class="currentLocale !== 'ka' ? 'font-display' : ''"
+              >
+                {{ $t("address-line1") }}<br />
+                {{ $t("address-line2") }}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card class="bg-card shadow-xl border-wine-red/20">
+            <CardHeader>
+              <CardTitle
+                class="text-2xl text-wine-white"
+                :class="currentLocale !== 'ka' ? 'font-display' : ''"
+                >{{ $t("details-title") }}</CardTitle
+              >
+            </CardHeader>
+            <CardContent>
+              <p
+                class="text-lg leading-relaxed"
+                :class="currentLocale !== 'ka' ? 'font-display' : ''"
+              >
+                {{ $t("email") }}:
+                <a href="mailto:info@alazare.ge" class="underline"
+                  >info@alazare.ge</a
+                ><br />
+                {{ $t("phone") }}:
+                <a href="tel:+995500000000" class="underline"
+                  >+995 500 00 00 00</a
+                >
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         <!-- Fancy Section -->
-        <div class="relative p-12 rounded-2xl shadow bg-card overflow-hidden">
+        <Card
+          class="relative bg-card shadow-xl border-wine-red/30 overflow-hidden"
+        >
+          <!-- Overlay wine texture -->
           <div
-            class="absolute inset-0 opacity-10 pointer-events-none bg-wine-red/60 bg-center"
+            class="absolute inset-0 bg-[url('/images/wine-texture.jpg')] bg-cover opacity-10 pointer-events-none"
           ></div>
 
-          <h2 class="text-4xl font-semibold mb-6 text-center">
-            {{ $t("visit-title") }}
-          </h2>
-
-          <p
-            class="font-base text-lg text-center max-w-2xl mx-auto leading-relaxed mb-6"
-          >
-            {{ $t("description") }}
-          </p>
-
-          <div
-            class="flex flex-col md:flex-row items-center justify-center gap-6 mt-8"
-          >
-            <div
-              class="p-6 rounded-xl bg-secondary shadow text-center w-full md:w-1/3"
+          <CardHeader>
+            <CardTitle
+              class="text-4xl text-center text-wine-white mb-6"
+              :class="currentLocale !== 'ka' ? 'font-display' : ''"
             >
-              <h3 class="text-xl font-semibold mb-2">
-                {{ $t("tastings-title") }}
-              </h3>
-              <p class="font-base leading-relaxed">
-                {{ $t("tastings-description") }}
-              </p>
-            </div>
+              {{ $t("visit-title") }}
+            </CardTitle>
+          </CardHeader>
 
-            <div
-              class="p-6 rounded-xl bg-secondary shadow text-center w-full md:w-1/3"
+          <CardContent>
+            <p
+              class="text-lg text-center max-w-2xl mx-auto leading-relaxed mb-10"
+              :class="currentLocale !== 'ka' ? 'font-display' : ''"
             >
-              <h3 class="text-xl font-semibold mb-2">
-                {{ $t("tours-title") }}
-              </h3>
-              <p class="font-base leading-relaxed">
-                {{ $t("tours-description") }}
-              </p>
+              {{ $t("description") }}
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6 mt-8">
+              <Card class="bg-secondary/60 w-full md:w-1/3 border-wine-red/20">
+                <CardHeader>
+                  <CardTitle
+                    class="text-xl text-center text-wine-white"
+                    :class="currentLocale !== 'ka' ? 'font-display' : ''"
+                    >{{ $t("tastings-title") }}</CardTitle
+                  >
+                </CardHeader>
+                <CardContent>
+                  <p
+                    class="text-center leading-relaxed"
+                    :class="currentLocale !== 'ka' ? 'font-display' : ''"
+                  >
+                    {{ $t("tastings-description") }}
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card class="bg-secondary/60 w-full md:w-1/3 border-wine-red/20">
+                <CardHeader>
+                  <CardTitle
+                    class="text-xl text-center text-wine-white"
+                    :class="currentLocale !== 'ka' ? 'font-display' : ''"
+                    >{{ $t("tours-title") }}</CardTitle
+                  >
+                </CardHeader>
+                <CardContent>
+                  <p
+                    class="text-center leading-relaxed"
+                    :class="currentLocale !== 'ka' ? 'font-display' : ''"
+                  >
+                    {{ $t("tours-description") }}
+                  </p>
+                </CardContent>
+              </Card>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
         <!-- Social Media -->
-        <div class="text-center">
-          <h2 class="text-3xl font-semibold mb-4">{{ $t("follow-us") }}</h2>
+        <div class="text-center mt-10">
+          <h2
+            class="text-3xl font-semibold mb-6 text-wine-white"
+            :class="currentLocale !== 'ka' ? 'font-display' : ''"
+          >
+            {{ $t("follow-us") }}
+          </h2>
           <SocialMedia class="text-wine-red" />
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
-
-<style scoped></style>
