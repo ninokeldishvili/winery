@@ -8,7 +8,8 @@
       {{ $t("find-your-perfect-pour") }}
     </h1>
     <div class="grid grid-cols-3 w-full">
-      <div
+      <i18n-link
+        to="/wine/red-wines"
         class="relative flex flex-col gap-20 items-center justify-center group cursor-pointer"
       >
         <h2
@@ -36,8 +37,9 @@
         >
           <img src="/images/red.webp" alt="red wines" />
         </div>
-      </div>
-      <div
+      </i18n-link>
+      <i18n-link
+        to="/wine/white-wines"
         class="relative flex flex-col gap-20 items-center justify-center group cursor-pointer"
       >
         <h2
@@ -65,9 +67,9 @@
         >
           <img src="/images/white.webp" alt="white wines" />
         </div>
-      </div>
-
-      <div
+      </i18n-link>
+      <i18n-link
+        to="/wine/rose-wines"
         class="relative flex flex-col gap-20 items-center justify-center group cursor-pointer"
       >
         <h2
@@ -95,7 +97,7 @@
         >
           <img src="/images/rose.webp" alt="rose wines" />
         </div>
-      </div>
+      </i18n-link>
     </div>
   </div>
 </template>
