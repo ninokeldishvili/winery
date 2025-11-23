@@ -72,7 +72,7 @@ const wines = ref<Wine[]>([
     </div>
     <div class="flex flex-col gap-25">
       <div
-        class="flex px-20 h-[450px] relative"
+        class="flex md:mx-20 h-[450px] relative"
         v-for="wine in wines"
         :key="wine.id"
       >
@@ -84,11 +84,11 @@ const wines = ref<Wine[]>([
         <img
           src="/images/white.webp"
           alt="white wine"
-          class="h-full absolute left-50 bottom-5 object-cover"
+          class="h-3/5 md:h-full absolute right-5 md:right-unset md:left-50 -top-5 md:top-unset md:bottom-5 object-cover"
         />
 
         <div
-          class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 flex flex-col items-start gap-8 z-20"
+          class="absolute left-2 md:left-1/2 md:-translate-x-1/2 -translate-y-1/2 top-1/2 flex flex-col items-start gap-8 z-20"
         >
           <div class="flex flex-col gap-4">
             <h1
