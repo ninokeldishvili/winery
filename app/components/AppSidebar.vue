@@ -31,8 +31,7 @@ const isActive = (href: string) => {
   )
     ? path.replace(/^\/[a-zA-Z-]+/, "")
     : path;
-
-  return normalized === href;
+  return "/" + normalized.split("/")[1] === href;
 };
 
 export interface SidebarItem {

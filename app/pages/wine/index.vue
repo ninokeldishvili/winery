@@ -41,7 +41,7 @@
           </div>
         </div>
         <div
-          class="absolute -bottom-10 w-25 rotate-20 group-hover:scale-110 group-hover:rotate-0 transition-all fade-in duration-600 pointer-events-none select-none"
+          class="absolute -bottom-10 w-25 rotate-15 group-hover:scale-110 group-hover:rotate-0 transition-all fade-in duration-600 pointer-events-none select-none"
         >
           <img src="/images/red.webp" alt="red wines" />
         </div>
@@ -79,7 +79,7 @@
           </div>
         </div>
         <div
-          class="absolute -bottom-10 w-25 rotate-20 group-hover:scale-110 group-hover:rotate-0 transition-all fade-in duration-600 pointer-events-none select-none"
+          class="absolute -bottom-10 w-25 rotate-15 group-hover:scale-110 group-hover:rotate-0 transition-all fade-in duration-600 pointer-events-none select-none"
         >
           <img src="/images/white.webp" alt="white wines" />
         </div>
@@ -117,7 +117,7 @@
           </div>
         </div>
         <div
-          class="absolute -bottom-10 w-25 rotate-20 group-hover:scale-110 group-hover:rotate-0 transition-all fade-in duration-600 pointer-events-none select-none"
+          class="absolute -bottom-10 w-25 rotate-15 group-hover:scale-110 group-hover:rotate-0 transition-all fade-in duration-600 pointer-events-none select-none"
         >
           <img src="/images/rose.webp" alt="rose wines" />
         </div>
