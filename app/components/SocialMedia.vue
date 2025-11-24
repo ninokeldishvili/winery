@@ -23,7 +23,7 @@ const icons = [
       :href="link"
       target="_blank"
       rel="noopener"
-      class="transition hover:opacity-70"
+      class="transition-all hover:opacity-70 hover:scale-120 ease-in-out duration-200"
     >
       <Icon :icon="icon" :width="size" :height="size" />
     </a>

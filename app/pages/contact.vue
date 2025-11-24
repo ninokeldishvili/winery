@@ -17,16 +17,16 @@ const currentLocale = computed(() => {
     <img
       alt="stain"
       src="/images/red-stain.svg"
-      class="hidden md:block absolute top-10 left-10 w-40 opacity-20"
+      class="hidden md:block absolute top-10 left-10 w-40 opacity-20 float-slow"
     />
     <img
       alt="stain"
       src="/images/red-stain.svg"
-      class="hidden md:block absolute bottom-10 right-10 w-40 opacity-20 rotate-180"
+      class="hidden md:block absolute bottom-10 right-10 w-40 opacity-20 rotate-180 float-slow"
     />
     <div class="px-6 md:px-20 xl:px-40 flex flex-col gap-8 md:gap-12">
       <h1
-        class="text-2xl md:text-5xl md:mb-16 text-center text-wine-white"
+        class="text-2xl md:text-5xl md:mb-16 text-center text-wine-white animate-fade-in-scale"
         :class="currentLocale !== 'ka' ? 'font-display' : ''"
       >
         {{ $t("title") }}
@@ -35,7 +35,9 @@ const currentLocale = computed(() => {
       <div class="space-y-12">
         <!-- Contact Info Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <Card class="bg-card shadow-xl border-wine-red/20">
+          <Card
+            class="bg-card shadow-xl border-wine-red/20 animate-fade-in-left"
+          >
             <CardHeader>
               <CardTitle
                 class="text-2xl text-wine-white"
@@ -54,7 +56,9 @@ const currentLocale = computed(() => {
             </CardContent>
           </Card>
 
-          <Card class="bg-card shadow-xl border-wine-red/20">
+          <Card
+            class="bg-card shadow-xl border-wine-red/20 animate-fade-in-right"
+          >
             <CardHeader>
               <CardTitle
                 class="text-2xl text-wine-white"
@@ -82,7 +86,7 @@ const currentLocale = computed(() => {
 
         <!-- Fancy Section -->
         <Card
-          class="relative bg-card shadow-xl border-wine-red/30 overflow-hidden"
+          class="relative bg-card shadow-xl border-wine-red/30 overflow-hidden animate-slide-up"
         >
           <!-- Overlay wine texture -->
           <div
