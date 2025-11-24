@@ -30,7 +30,7 @@ const { $t } = useI18n();
         <CarouselItem>
           <div class="grid grid-cols-1 md:grid-cols-3 h-screen">
             <div
-              class="relative col-span-1 flex flex-col gap-4 md:gap-6 items-center justify-center p-6 md:ml-10 md:py-20"
+              class="relative col-span-1 flex flex-col gap-4 md:gap-6 items-center justify-center p-6 md:ml-10 md:py-20 animate-fade-in-left"
             >
               <span class="font-bold text-6xl md:text-8xl font-tangerine">
                 Alazare
@@ -50,7 +50,7 @@ const { $t } = useI18n();
             </div>
 
             <div
-              class="col-span-1 md:col-span-2 flex md:items-center justify-center overflow-hidden py-2 md:py-0"
+              class="col-span-1 md:col-span-2 flex md:items-center justify-center overflow-hidden py-2 md:py-0 animate-fade-in-scale"
             >
               <img
                 alt="white"
