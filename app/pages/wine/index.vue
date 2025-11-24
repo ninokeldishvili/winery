@@ -49,6 +49,11 @@ const currentLocale = computed(() => {
           </div>
         </div>
         <div
+          class="absolute flex md:hidden border border-wine-red py-1 px-4 z-10 text-wine-red right-10 top-0"
+        >
+          {{ $t("view") }}
+        </div>
+        <div
           class="absolute -bottom-10 w-25 rotate-15 group-hover:scale-110 group-hover:rotate-0 transition-all fade-in duration-600 pointer-events-none select-none"
         >
           <img src="/images/red.webp" alt="red wines" />
@@ -87,6 +92,12 @@ const currentLocale = computed(() => {
           </div>
         </div>
         <div
+          class="absolute flex md:hidden border border-wine-white py-1 px-4 z-10 text-wine-white right-10 top-0"
+        >
+          {{ $t("view") }}
+        </div>
+
+        <div
           class="absolute -bottom-10 w-25 rotate-15 group-hover:scale-110 group-hover:rotate-0 transition-all fade-in duration-600 pointer-events-none select-none"
         >
           <img src="/images/white.webp" alt="white wines" />
@@ -123,6 +134,11 @@ const currentLocale = computed(() => {
               Rose wines
             </span>
           </div>
+        </div>
+        <div
+          class="absolute flex md:hidden border border-wine-rose py-1 px-4 z-10 text-wine-rose right-10 top-0"
+        >
+          {{ $t("view") }}
         </div>
         <div
           class="absolute -bottom-10 w-25 rotate-15 group-hover:scale-110 group-hover:rotate-0 transition-all fade-in duration-600 pointer-events-none select-none"
