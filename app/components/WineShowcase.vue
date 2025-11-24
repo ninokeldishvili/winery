@@ -1,4 +1,20 @@
 <script setup lang="ts">
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "~/components/ui/breadcrumb";
+import { SlashIcon } from "lucide-vue-next";
+const route = useRouter();
+console.log(route.currentRoute.value.path);
+
+const currentRouteName = computed(() => {
+  let arr = route.currentRoute.value.path.split("/");
+  return arr[arr.length - 1];
+});
+
 interface Wine {
   id: number;
   name: string;
@@ -48,7 +64,7 @@ const colors = computed(() => wineColors[props.primaryColor]);
 <template>
   <div class="pb-20">
     <!-- HEADER -->
-    <div class="text-center py-20">
+    <div class="text-center pt-10 md:pt-20 md:pb-10 pb-5">
       <h1
         class="font-display text-5xl md:text-7xl uppercase tracking-widest"
         :class="colors.text"
@@ -78,10 +94,34 @@ const colors = computed(() => wineColors[props.primaryColor]);
       </p>
     </div>
 
+    <Breadcrumb class="mx-5 md:mx-20 pb-10">
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">
+            {{ $t("home") }}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator>
+          <SlashIcon />
+        </BreadcrumbSeparator>
+        <BreadcrumbItem>
+          <i18n-link to="/wine">
+            {{ $t("wine") }}
+          </i18n-link>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator>
+          <SlashIcon />
+        </BreadcrumbSeparator>
+        <BreadcrumbItem v-if="currentRouteName">
+          {{ $t(currentRouteName) }}
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
+
     <!-- LIST -->
     <div class="flex flex-col gap-25">
       <div
-        class="flex md:mx-20 h-[450px] relative"
+        class="flex mx-5 md:mx-20 h-[450px] relative"
         v-for="wine in wines"
         :key="wine.id"
       >
@@ -115,33 +155,33 @@ const colors = computed(() => wineColors[props.primaryColor]);
             </p>
           </div>
 
-          <div class="flex gap-8 items-start ml-4">
+          <div class="flex gap-2 md:gap-8 items-start ml-4">
             <div class="w-1 h-40 rounded-full mt-2" :class="colors.bg"></div>
 
             <div class="flex flex-col gap-2 md:gap-5 font-georgian">
               <div class="flex items-baseline gap-4">
                 <span
-                  class="uppercase text-sm tracking-widest"
+                  class="uppercase text-sm md:tracking-widest"
                   :class="colors.text"
                 >
                   {{ $t("region") }}
                 </span>
-                <span class="text-xl">{{ $t(wine.region) }}</span>
+                <span class="md:text-xl">{{ $t(wine.region) }}</span>
               </div>
 
               <div class="flex items-baseline gap-4">
                 <span
-                  class="uppercase text-sm tracking-widest"
+                  class="uppercase text-sm md:tracking-widest"
                   :class="colors.text"
                 >
                   {{ $t("grapes") }}
                 </span>
-                <span class="text-xl">{{ $t(wine.grape) }}</span>
+                <span class="text-md md:text-xl">{{ $t(wine.grape) }}</span>
               </div>
 
               <div class="flex items-baseline gap-4">
                 <span
-                  class="uppercase text-sm tracking-widest"
+                  class="uppercase text-sm md:tracking-widest"
                   :class="colors.text"
                 >
                   {{ $t("year") }}
